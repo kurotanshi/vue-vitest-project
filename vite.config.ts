@@ -10,8 +10,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    // Only use devtools in development, not in test/CI environment
-    process.env.NODE_ENV !== 'test' && process.env.CI !== 'true' && vueDevTools(),
+    // Only add devtools in development mode (not in test or production)
+    process.env.NODE_ENV === 'development' ? vueDevTools() : undefined,
   ].filter(Boolean),
   resolve: {
     alias: {

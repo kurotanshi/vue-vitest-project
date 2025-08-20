@@ -58,18 +58,3 @@ jobs:
       run: |
         echo "Running unit tests..."
         npm run test:unit:ci || exit 1
-    
-    - name: Generate coverage report
-      run: |
-        echo "Generating coverage report..."
-        npm run test:unit:ci -- --coverage
-      continue-on-error: true
-    
-    - name: Upload coverage to Codecov (optional)
-      uses: codecov/codecov-action@v3
-      if: matrix.node-version == '20.x'
-      with:
-        files: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-umbrella
-        fail_ci_if_error: false

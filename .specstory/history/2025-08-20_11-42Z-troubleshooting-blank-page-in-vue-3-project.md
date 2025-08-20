@@ -546,3 +546,15 @@ _**Assistant**_
 
 ---
 
+_**User**_
+
+我不小心刪除 Credential system 會怎樣?
+
+---
+
+_**Assistant**_
+
+
+
+---
+

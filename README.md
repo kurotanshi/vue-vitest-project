@@ -1,6 +1,6 @@
 # Vue 3 + Vitest 專案模板
 
-![CI Status](https://github.com/kurotanshi/vue-vitest-project/actions/workflows/test.yml/badge.svg)
+![CI Status](https://github.com/newfom/vue-vitest-project/actions/workflows/test.yml/badge.svg)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)
 ![Vue Version](https://img.shields.io/badge/vue-3.5.18-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)

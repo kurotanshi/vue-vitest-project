@@ -944,7 +944,75 @@ _**Assistant**_
 3. 提交更改：
    - 在專案資料夾上按右鍵
    - 選擇 "Git 提交" (Git Commit)
-   - 提交訊息輸入：`Add conversation 
+   - 提交訊息輸入：`Add conversation history`
+   - 勾選 `.specstory` 資料夾
+   - 點擊 "提交並推送" (Commit & Push)
+
+這樣對話歷史就會被保存到您的 GitHub 倉庫中。需要我幫您找到這個隱藏資料夾嗎？
+
+---
+
+_**User**_
+
+我發pr test 好像有問題. 怎麼在github 看
+
+---
+
+_**Assistant**_
+
+讓我指導您在 GitHub 上查看 PR 的測試結果：
+
+1. 訪問您的 PR 頁面：
+   - 去到 https://github.com/newfom/vue-vitest-project/pulls
+   - 點擊您的 PR（應該是關於 Test-GitHub-Action 分支的）
+
+2. 在 PR 頁面中：
+   - 找到 "Checks" 標籤頁
+   - 或者直接在 PR 頁面上方查看紅色 ❌ 或綠色 ✅ 狀態標記
+
+3. 如果測試失敗：
+   - 點擊失敗的檢查項目
+   - 展開失敗的步驟
+   - 查看錯誤訊息和日誌
+
+或者您也可以：
+- 訪問 https://github.com/newfom/vue-vitest-project/actions
+- 點擊最新的工作流程運行記錄
+- 查看詳細的執行日誌
+
+請您打開 PR 或 Actions 頁面，告訴我您看到什麼錯誤，我可以幫您分析問題所在。
+
+---
+
+_**User**_
+
+都沒東西
+
+---
+
+_**Assistant**_
+
+讓我們檢查一下情況。
+
+1. 首先，確認 PR 是否正確創建：
+   - 訪問 https://github.com/newfom/vue-vitest-project/pulls
+   - 如果沒有看到 PR，我們需要創建一個
+
+2. 如果需要創建 PR：
+   - 訪問 https://github.com/newfom/vue-vitest-project
+   - 點擊 "Pull requests" 標籤
+   - 點擊綠色的 "New pull request" 按鈕
+   - 選擇：
+     - base: main ← compare: Test-GitHub-Action
+   - 點擊 "Create pull request"
+   - 填寫標題（例如："Test GitHub Actions workflow"）
+   - 點擊 "Create pull request"
+
+如果您已經完成這些步驟但仍然看不到任何東西，讓我們檢查：
+1. `test.yml` 檔案是否正確推送到了您的分支
+2. 工作流程的權限設定是否正確
+
+請您先檢查一下 PR 是否存在，如果不存在，我可以指導您創建 PR。如果 PR 已存在，請分享 PR 的 URL，我來幫您查看具體問題。
 
 ---
 

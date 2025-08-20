@@ -504,3 +504,45 @@ _**Assistant**_
 
 ---
 
+_**User**_
+
+是不是有什麼記錄帳號的地方. git
+
+---
+
+_**Assistant**_
+
+是的，我們可以檢查並設定 Git 的用戶信息。讓我們先看看目前的設定： 看來沒有設定。讓我們設定您的 Git 用戶信息： 
+
+---
+
+_**User**_
+
+我是指tortoisegit
+
+---
+
+_**Assistant**_
+
+啊，是的！在 TortoiseGit 中存儲憑證的地方有幾個：
+
+1. TortoiseGit 的認證管理器：
+   - 在專案資料夾按右鍵
+   - 選擇 "TortoiseGit" > "Settings"
+   - 在左側選擇 "Git" > "Credential"
+   - 這裡可以查看和管理已保存的憑證
+
+2. Windows 憑證管理器：
+   - 按 Windows + R
+   - 輸入 `control /name Microsoft.CredentialManager`
+   - 點擊 "Windows 憑證"
+   - 找到 `git:https://github.com` 相關的項目
+
+如果您想清除已保存的憑證重新設定：
+1. 在 Windows 憑證管理器中刪除 GitHub 相關的憑證
+2. 在 TortoiseGit 設定中的 Credential 部分清除保存的憑證
+
+這樣下次推送時，TortoiseGit 就會重新要求您輸入憑證。您想清除現有的憑證重新設定嗎？
+
+---
+

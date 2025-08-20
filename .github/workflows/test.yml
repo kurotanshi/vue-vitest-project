@@ -28,16 +28,25 @@ jobs:
       run: npm ci
     
     - name: Run linter
-      run: npm run lint
+      run: |
+        echo "Running ESLint..."
+        npm run lint
     
     - name: Run type check
-      run: npm run type-check
+      run: |
+        echo "Running TypeScript type check..."
+        npm run type-check
     
     - name: Run unit tests
-      run: npm run test:unit:ci
+      run: |
+        echo "Running unit tests..."
+        npm run test:unit:ci
     
     - name: Generate coverage report
-      run: npm run test:unit:ci -- --coverage
+      run: |
+        echo "Generating coverage report..."
+        npm run test:unit:ci -- --coverage
+      continue-on-error: true
     
     - name: Upload coverage to Codecov (optional)
       uses: codecov/codecov-action@v3

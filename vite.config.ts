@@ -10,8 +10,9 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    vueDevTools(),
-  ],
+    // Only use devtools in development, not in test/CI environment
+    process.env.NODE_ENV !== 'test' && process.env.CI !== 'true' && vueDevTools(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

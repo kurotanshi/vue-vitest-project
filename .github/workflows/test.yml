@@ -10,6 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     
+    env:
+      CI: true
+      NODE_ENV: test
+    
     strategy:
       matrix:
         node-version: [18.x, 20.x]
